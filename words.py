@@ -1,0 +1,1 @@
+palabras = ['screen','tv','sun','movie','game','dudmit','susana']
