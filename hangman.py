@@ -27,8 +27,8 @@ def jugar(word):
     guessed_words = []
     tries = 5
     print("Comenzemos a jugar!!!")
-    print(desplegar_monito(tries))
-    print(word_completion)
+    print(desplegar_monito(tries))#Despliega el monito al principio
+    print(word_completion)#Muestra en lo que cabe de la palabra
     print("\n")
     while not guessed and tries > 0:
         guess = input("Introduce una palabra o letra a adivinar: ").upper()
@@ -50,7 +50,7 @@ def jugar(word):
                 word_completion = "".join(word_as_list)
                 if "_" not in word_completion:
                     guessed = True
-        #compara toda la palabra
+        #compara toda la palabraaaaaa
         elif len(guess) == len(word) and guess.isalpha():
             if guess in guessed_words:
                 print("Adivinaste la palabra, ", guess)
@@ -71,7 +71,7 @@ def jugar(word):
     else:
         print("Sorry, ya no tienes intentos, pero la palabra era " + word + " , suerte para la siguiente.")
     return word
-
+#La neta profe, no pude poner el monito en el otro archivo porque me daba error, pero aquí lo dejo xd
 def desplegar_monito(tries):
     stages = [ """
                     ---------
@@ -124,7 +124,7 @@ def desplegar_monito(tries):
     ]
     return stages[tries]
 
-
+#Inicializa el juego
 def main():
     word = get_valid_word()
     jugar(word)
